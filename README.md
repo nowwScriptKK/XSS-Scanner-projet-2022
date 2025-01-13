@@ -1,4 +1,9 @@
 ## XSS-Scanner
+
+# Le projet date de 2022, XSS est une faille static dans le temps mais des amélioration peuvent être ajouté dans les fichier de détections
+
+Si vous avez besoin d'aide sur l'installation ou la configuration contacté moi discord : actheglitch
+
 Simple XSS HTTP/S scanner without proxy, it can scan dom or any other script. <br>I used Selenium to develop this software, it launches a browser in the background and returns the result to you, the script is waiting to receive an alert(). <br>So you can use any wordlist for AngularJS, Electron etc.<br><br>
 
 <br>
