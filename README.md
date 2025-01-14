@@ -11,6 +11,29 @@ Added the Firefox Gecko for windows
 
 Adaptation of the code for use under Windows
 
+Add multiparam
+
+### Exemple 1 : Utilisation de base avec une URL GET
+python ./main.py -l https://www.example.com/?q={{inject}}
+
+### Exemple 2 : Utilisation de base avec une URL POST
+python ./main.py -l https://www.example.com/ -d data1={{inject}}#data2={{inject}}
+
+### Exemple 3 : Utilisation avec une wordlist personnalisée
+python ./main.py -l https://www.example.com/?q={{inject}} -w files/wordlist/xssBigPayloadList.txt
+
+### Exemple 4 : Utilisation avec un proxy unique
+python ./main.py -l https://www.example.com/?q={{inject}} -p http://user:pass@proxy.example.com:8080
+
+### Exemple 5 : Utilisation avec une liste de proxies
+python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
+
+### Exemple 7 : Utilisation avec une wordlist personnalisée et une liste de proxies
+python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
+
+
+A future update will certainly be made to detect the presence of a cloudflare, or potential blockage
+
 
 # The project dates back to 2022; XSS is a static vulnerability over time, but improvements can be added to the detection files.
 
