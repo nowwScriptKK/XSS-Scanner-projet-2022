@@ -12,17 +12,21 @@ import requests
 init(autoreset=True)
 
 class XssScanner:
-    def __init__(self, url, wordlist, methode, proxy, data, use_proxy_list):
+    def __init__(self, url, wordlist, methode, proxy, data, use_proxy_list, proxy_list_file):
         self.proxy = proxy
         self.use_proxy_list = use_proxy_list
         self.proxy_list = []
         if self.use_proxy_list:
+            self.proxy_list_file = proxy_list_file
             self.load_proxy_list()
 
         if proxy:
-            print('API PROXY SELECTED')
+            print(f'API PROXY SELECTED: {proxy}')
         else:
-            print('No proxy')
+            if self.use_proxy_list and self.proxy_list:
+                print(Fore.GREEN + 'ProxyAdd Ready')
+            else:
+                print('No proxy')
 
         self.payload = False
         self.methode = methode
@@ -36,8 +40,9 @@ class XssScanner:
         print(Fore.GREEN + "Selenium start...")
 
     def load_proxy_list(self):
-        with open('files/proxylist.txt', 'r') as f:
+        with open(self.proxy_list_file, 'r') as f:
             self.proxy_list = [line.strip() for line in f]
+        print(f'Proxy list loaded from {self.proxy_list_file}')
 
     def close_browser(self):
         print('Close Browser...')
@@ -137,6 +142,7 @@ class XssScanner:
                             "http": current_proxy,
                             "https": current_proxy,
                         }
+                        print(f'Using proxy: {current_proxy}')
                     elif self.proxy:
                         proxies = {
                             "http": self.proxy,
