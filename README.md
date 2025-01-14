@@ -10,9 +10,9 @@ Added "-p" and "-s" options
 
 Thanks to the use of gecko, this script can be made almost completely invisible.
 
-If you need help with installation or configuration, contact me on Discord :: actheglitch
+If you need help with installation or configuration, contact me on Discord : actheglitch
 
-Simple XSS HTTP/S scanner without proxy, it can scan dom or any other script. <br>I used Selenium to develop this software, it launches a browser in the background and returns the result to you, the script is waiting to receive an alert(). <br>So you can use any wordlist for AngularJS, Electron etc.<br><br>
+Simple XSS HTTP/S scanner, it can scan dom or any other script. <br>I used Selenium to develop this software, it launches a browser in the background and returns the result to you, the script is waiting to receive an alert(). <br>So you can use any wordlist for AngularJS, Electron etc.<br><br>
 
 <br>
 ## Setting: 
