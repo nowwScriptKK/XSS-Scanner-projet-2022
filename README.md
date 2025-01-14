@@ -5,6 +5,8 @@ Added support for single proxy or proxy file management
 
 Added "-p" and "-s" options
 
+Added new payload list : "xssBigPayloadList.txt"
+
 
 # The project dates back to 2022; XSS is a static vulnerability over time, but improvements can be added to the detection files.
 
