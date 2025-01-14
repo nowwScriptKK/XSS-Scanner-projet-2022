@@ -5,7 +5,7 @@ Ajout de la gestion des proxy unique ou par fichier
 
 Ajout de "-p" et "-s"
 
-# Le projet date de 2022, XSS est une faille static dans le temps mais des amélioration peuvent être ajouté dans les fichier de détections
+# Le projet date de 2022, XSS est une faille static dans le temps mais des améliorations peuvent être ajouté dans les fichier de détections
 Grâce à l'utilisation de gecko, se script peut-être rendu presque totalement invisible.
 
 Si vous avez besoin d'aide sur l'installation ou la configuration contacté moi discord : actheglitch
