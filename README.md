@@ -13,22 +13,22 @@ Adaptation of the code for use under Windows
 
 Add multiparam
 
-### Exemple 1 : Utilisation de base avec une URL GET
+### Exemple 1 : Basic Usage with a GET URL
 python ./main.py -l https://www.example.com/?q={{inject}}
 
-### Exemple 2 : Utilisation de base avec une URL POST
+### Exemple 2 : Basic Usage with a POST URL
 python ./main.py -l https://www.example.com/ -d data1={{inject}}#data2={{inject}}
 
-### Exemple 3 : Utilisation avec une wordlist personnalisée
+### Exemple 3 : Use with a custom wordlist
 python ./main.py -l https://www.example.com/?q={{inject}} -w files/wordlist/xssBigPayloadList.txt
 
-### Exemple 4 : Utilisation avec un proxy unique
+### Exemple 4 : Use with a single proxy
 python ./main.py -l https://www.example.com/?q={{inject}} -p http://user:pass@proxy.example.com:8080
 
-### Exemple 5 : Utilisation avec une liste de proxies
+### Exemple 5 : Using with a proxy list
 python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
 
-### Exemple 7 : Utilisation avec une wordlist personnalisée et une liste de proxies
+### Exemple 6 : Use with a custom wordlist and proxy list
 python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
 
 
