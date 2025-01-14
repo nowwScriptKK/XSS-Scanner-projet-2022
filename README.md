@@ -14,22 +14,25 @@ Adaptation of the code for use under Windows
 Add multiparam
 
 ### Exemple 1 : Basic Usage with a GET URL
-python ./main.py -l https://www.example.com/?q={{inject}}
+    python ./main.py -l https://www.example.com/?q={{inject}}
 
 ### Exemple 2 : Basic Usage with a POST URL
-python ./main.py -l https://www.example.com/ -d data1={{inject}}#data2={{inject}}
+    python ./main.py -l https://www.example.com/ -d data1={{inject}}#data2={{inject}}
 
 ### Exemple 3 : Use with a custom wordlist
-python ./main.py -l https://www.example.com/?q={{inject}} -w files/wordlist/xssBigPayloadList.txt
+    python ./main.py -l https://www.example.com/?q={{inject}} -w files/wordlist/xssBigPayloadList.txt
 
 ### Exemple 4 : Use with a single proxy
-python ./main.py -l https://www.example.com/?q={{inject}} -p http://user:pass@proxy.example.com:8080
+    python ./main.py -l https://www.example.com/?q={{inject}} -p http://user:pass@proxy.example.com:8080
 
 ### Exemple 5 : Using with a proxy list
-python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
+    python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
 
 ### Exemple 6 : Use with a custom wordlist and proxy list
-python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt -w files/wordlist/xssBigPayloadList.txt
+    python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt -w files/wordlist/xssBigPayloadList.txt
+
+### Exemple 7 : Use post data, proxy list, wordlist 
+    python ./main.py -l https://www.example.com/ -d data1={{inject}}#data2={{inject}}  -s -f files/proxylist.txt  -w files/wordlist/xssBigPayloadList.txt
 
 
 A future update will certainly be made to detect the presence of a cloudflare, or potential blockage
