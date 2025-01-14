@@ -1,10 +1,10 @@
-#Main
+# Main
 from xss import XssScanner
 from time import sleep
 import argparse
 
 def _run(url, data, proxy, wordlist, use_proxy_list):
-    if data != False:
+    if data:
         print('Set send POST')
         methode = 'post'
         print(data)
@@ -16,7 +16,6 @@ def _run(url, data, proxy, wordlist, use_proxy_list):
     except:
         pass
 
-    thread = 2
     lunch = XssScanner(url, wordlist, methode, proxy, data, use_proxy_list)
     lunch.run()
 
