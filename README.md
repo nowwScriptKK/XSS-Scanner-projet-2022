@@ -7,9 +7,10 @@ Added "-p" for unique proxy and "-s" fort list proxy in "/files/wordlist/proxyli
 
 Added new payload list : "xssBigPayloadList.txt"
 
-Ajout de gecko firefox pour windows
+Added the Firefox Gecko for windows
 
-Adaptation du code pour l'utilisation sous windows
+Adaptation of the code for use under Windows
+
 
 # The project dates back to 2022; XSS is a static vulnerability over time, but improvements can be added to the detection files.
 
