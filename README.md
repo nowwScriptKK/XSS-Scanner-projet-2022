@@ -1,16 +1,15 @@
 ## XSS-Scanner
+
 # Update du 14/01/2024
-
-Ajout de la gestion des proxy unique ou par fichier
-
-Ajout de "-p" et "-s"
-
-# Le projet date de 2022, XSS est une faille static dans le temps mais des améliorations peuvent être ajouté dans les fichier de détections
+Added support for single proxy or proxy file management
+Added "-p" and "-s" options
 
 
-Grâce à l'utilisation de gecko, se script peut-être rendu presque totalement invisible.
+# The project dates back to 2022; XSS is a static vulnerability over time, but improvements can be added to the detection files.
 
-Si vous avez besoin d'aide sur l'installation ou la configuration contacté moi discord : actheglitch
+Thanks to the use of gecko, this script can be made almost completely invisible.
+
+If you need help with installation or configuration, contact me on Discord :: actheglitch
 
 Simple XSS HTTP/S scanner without proxy, it can scan dom or any other script. <br>I used Selenium to develop this software, it launches a browser in the background and returns the result to you, the script is waiting to receive an alert(). <br>So you can use any wordlist for AngularJS, Electron etc.<br><br>
 
