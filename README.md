@@ -1,4 +1,9 @@
 ## XSS-Scanner
+# Update du 14/01/2024
+
+Ajout de la gestion des proxy unique ou par fichier
+
+Ajout de "-p" et "-s"
 
 # Le projet date de 2022, XSS est une faille static dans le temps mais des amélioration peuvent être ajouté dans les fichier de détections
 Grâce à l'utilisation de gecko, se script peut-être rendu presque totalement invisible.
