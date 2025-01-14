@@ -3,7 +3,7 @@
 # Update du 14/01/2024
 Added support for single proxy or proxy file management
 
-Added "-p" for unique proxy and "-s" fort list proxy in "/files/wordlist/proxylist.txt"
+Added "-p" for unique proxy and "-s" for list proxy add "-s -f /files/wordlist/proxylist.txt"
 
 Added new payload list : "xssBigPayloadList.txt"
 
@@ -29,7 +29,7 @@ python ./main.py -l https://www.example.com/?q={{inject}} -p http://user:pass@pr
 python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
 
 ### Exemple 6 : Use with a custom wordlist and proxy list
-python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt
+python ./main.py -l https://www.example.com/?q={{inject}} -s -f files/proxylist.txt -w files/wordlist/xssBigPayloadList.txt
 
 
 A future update will certainly be made to detect the presence of a cloudflare, or potential blockage
