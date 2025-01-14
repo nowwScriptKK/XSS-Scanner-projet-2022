@@ -1,1 +1,4 @@
-# Add personnal proxy per request 
+# Add personnal proxy per request  format 
+http://user:pass@host:port
+http://host:port
+....
