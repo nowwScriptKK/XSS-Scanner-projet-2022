@@ -12,7 +12,7 @@ Detector :
 
     URL ERROR: HTTPSConnectionPool(host='www.exghjghjgample.com', port=443): Max retries exceeded with url: /?q=';alert('XSS');//%0A (Caused by     NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025DE0F9A540>: Failed to resolve 'www.exghjghjgample.com' ([Errno 11001] getaddrinfo failed)"))
 
-# Update du 14/01/2024
+# Update du 14/01/2025
 Added support for single proxy or proxy file management
 
 Added "-p" for unique proxy and "-s" for list proxy add "-s -f /files/wordlist/proxylist.txt"
