@@ -117,8 +117,16 @@ class XssScanner:
                 if self.methode in ['get', 'GET']:
                     self.links = self.url.replace('{{inject}}', str(line))
                     try:
-                        self.driver.get(self.links)
-                        sleep(1)
+                        response = requests.get(self.links)
+                        if response.status_code == 403:
+                            print(Fore.RED + '403 Forbidden')
+                        elif response.status_code == 503:
+                            print(Fore.RED + '503 Service Unavailable')
+                        elif 520 <= response.status_code <= 527:
+                            print(Fore.RED + f'Cloudflare specific error: {response.status_code}')
+                        else:
+                            self.driver.get(self.links)
+                            sleep(1)
                     except Exception as e:
                         print(Fore.RED + f'URL ERROR: {e}')
                         self.count -= 1
@@ -152,12 +160,19 @@ class XssScanner:
                         proxies = None
 
                     x = requests.post(self.url, data=result, proxies=proxies)
-                    html_content = x.text
-                    self.driver.get(f"data:text/html;charset=utf-8,{html_content}")
-                    sleep(2)
-                    self.scan()
-                    result = []
-                    self.payload = False
+                    if x.status_code == 403:
+                        print(Fore.RED + '403 Forbidden')
+                    elif x.status_code == 503:
+                        print(Fore.RED + '503 Service Unavailable')
+                    elif 520 <= x.status_code <= 527:
+                        print(Fore.RED + f'Cloudflare specific error: {x.status_code}')
+                    else:
+                        html_content = x.text
+                        self.driver.get(f"data:text/html;charset=utf-8,{html_content}")
+                        sleep(2)
+                        self.scan()
+                        result = []
+                        self.payload = False
         print("######SCAN_END####")
         if self.detect >= 1:
             print(Fore.GREEN + 'DETECTED\n(' + str(self.detect) + '/' + str(self.count) + ')')
