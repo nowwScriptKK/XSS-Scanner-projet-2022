@@ -3,8 +3,11 @@
 # Update 15/01/2025
 
 Detector :
+
 403 Forbidden
+
 503 Service Unavailable
+
 520 à 527 Cloudflare specific errors.
 
     URL ERROR: HTTPSConnectionPool(host='www.exghjghjgample.com', port=443): Max retries exceeded with url: /?q=';alert('XSS');//%0A (Caused by     NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025DE0F9A540>: Failed to resolve 'www.exghjghjgample.com' ([Errno 11001] getaddrinfo failed)"))
